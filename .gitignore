@@ -1,2 +1,4 @@
 # Project exclude paths
 /out/
+/files/input.txt
+/files/output.txt
