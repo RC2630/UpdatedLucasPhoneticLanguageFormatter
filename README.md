@@ -1,0 +1,9 @@
+# Updated LPL (Lucas Phonetic Language) Formatter
+
+Lucas Phonetic Language is a series of transcription systems for English, designed to spell English in a consistent way, such that each phoneme (sound) in the language maps one-to-one onto a letter. Since English has more phonemes than letters, some LPL systems use digraphs (2 letters to represent 1 sound), while others use diacritics (letters with a circumflex or diaeresis accent above them).
+
+This formatter is an improved version of an earlier formatter for these systems (not on GitHub). This formatter is designed to easily format texts written in any of the LPL systems, and to easily switch between them using conversions. This is not too difficult, given that all of these systems are designed with consistency in mind. Additionally, users are able to convert any of these formats to and from IPA (the International Phonetic Alphabet).
+
+If you want to learn more about the LPL systems, check [this guide](https://docs.google.com/spreadsheets/d/1--xSqBpE0CiRrjunKn_67o1YE1hd63c-GWEo7_k1RV8/edit?usp=sharing) for a quick reference of how 2 of the most common LPL systems (NLPL and FLPL) work. Note that the document assumes that you are able to read IPA. If you would like a more detailed, deeper dive into the LPL systems, I recommend [this guide](https://docs.google.com/spreadsheets/d/1lbBMI5g4wh-w5gOxWXOSeAhi4I6lQ6RrHFHkEmhWYI4/edit?usp=sharing), which probably has too many tabs, but just pick the ones that are of interest to you. Again, knowledge of IPA is required.
+
+Note that "NLPL" (New Lucas Phonetic Language) on the linked guides are referred to as simply "LPL" (Lucas Phonetic Language) in this program, because the original LPL (the one called "LPL" on the detailed guide) is deprecated and I think NLPL has superceded it in terms of quality. So in case you are confused, just remember that NLPL on the guides mean the same thing as LPL in this program.
