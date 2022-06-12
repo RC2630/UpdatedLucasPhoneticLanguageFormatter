@@ -41,7 +41,11 @@ public class Formatter {
                     break;
                 }
 
-                formatted += rawLine.charAt(i);
+                if (specialNormals.containsKey(rawLine.charAt(i))) {
+                    formatted += specialNormals.get(rawLine.charAt(i));
+                } else {
+                    formatted += rawLine.charAt(i);
+                }
 
             }
         }
