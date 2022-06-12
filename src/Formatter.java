@@ -90,48 +90,42 @@ public class Formatter {
     }
 
     private String formatFLPLtoLPL(String flplLine) {
-        // TODO
-        throw new NotImplementedException();
+        return formatRawToLPL(formatFLPLtoRaw(flplLine));
     }
 
-    private String formatRawToIPA(String flplLine) {
+    private String formatRawToIPA(String rawLine) {
         // TODO
         throw new NotImplementedException();
     }
 
     private String formatFLPLtoIPA(String flplLine) {
+        return formatRawToIPA(formatFLPLtoRaw(flplLine));
+    }
+
+    private String formatIPAtoRaw(String ipaLine) {
         // TODO
         throw new NotImplementedException();
     }
 
-    private String formatIPAtoRaw(String flplLine) {
+    private String formatIPAtoLPL(String ipaLine) {
+        return formatRawToLPL(formatIPAtoRaw(ipaLine));
+    }
+
+    private String formatIPAtoFLPL(String ipaLine) {
+        return formatRawToFLPL(formatIPAtoRaw(ipaLine));
+    }
+
+    private String formatLPLtoRaw(String lplLine) {
         // TODO
         throw new NotImplementedException();
     }
 
-    private String formatIPAtoLPL(String flplLine) {
-        // TODO
-        throw new NotImplementedException();
+    private String formatLPLtoFLPL(String lplLine) {
+        return formatRawToFLPL(formatLPLtoRaw(lplLine));
     }
 
-    private String formatIPAtoFLPL(String flplLine) {
-        // TODO
-        throw new NotImplementedException();
-    }
-
-    private String formatLPLtoRaw(String flplLine) {
-        // TODO
-        throw new NotImplementedException();
-    }
-
-    private String formatLPLtoFLPL(String flplLine) {
-        // TODO
-        throw new NotImplementedException();
-    }
-
-    private String formatLPLtoIPA(String flplLine) {
-        // TODO
-        throw new NotImplementedException();
+    private String formatLPLtoIPA(String lplLine) {
+        return formatRawToIPA(formatLPLtoRaw(lplLine));
     }
 
     public void performFormattingOperation(int option)
