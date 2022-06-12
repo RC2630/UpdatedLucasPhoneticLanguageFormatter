@@ -15,6 +15,9 @@ public class References {
     private static final List<String> FLPL_CIRCUMFLEX_CORRESPONDENCES =
             Arrays.asList("ua", "e", "ai", "o", "au", "nn", "ss", "xx", "zz",
                           "Ua", "E", "Ai", "O", "Au", "Nn", "Ss", "Xx", "Zz");
+    private static final List<String> IPA_CIRCUMFLEX_CORRESPONDENCES =
+            Arrays.asList("ʌ", "ɛ", "aɪ", "ɔ", "aʊ", "ŋ", "θ", "ʒ", "ð",
+                          "ʌ", "ɛ", "aɪ", "ɔ", "aʊ", "ŋ", "θ", "ʒ", "ð");
     private static final List<Character> REGULAR_LETTERS_DOTTABLE =
             Arrays.asList('a', 'e', 'i', 'o', 'u',
                           'A', 'E', 'I', 'O', 'U');
@@ -24,9 +27,21 @@ public class References {
     private static final List<String> FLPL_DIAERESIS_CORRESPONDENCES =
             Arrays.asList("a", "ea", "i", "oi", "u",
                           "A", "Ea", "I", "Oi", "U");
+    private static final List<String> IPA_DIAERESIS_CORRESPONDENCES =
+            Arrays.asList("æ", "ə", "ɪ", "ɔɪ", "ʊ",
+                          "æ", "ə", "ɪ", "ɔɪ", "ʊ");
     private static final List<String> NORMAL_VOWELS_DOUBLED =
             Arrays.asList("aa", "ee", "ii", "oo", "uu",
                           "Aa", "Ee", "Ii", "Oo", "Uu");
+    private static final List<Character> RAW_TO_IPA_SPECIAL_NORMALS_RAW =
+            Arrays.asList('a', 'c', 'e', 'j', 'o', 'q', 'r', 'x', 'y',
+                          'A', 'C', 'E', 'J', 'O', 'Q', 'R', 'X', 'Y');
+    private static final List<String> RAW_TO_IPA_SPECIAL_NORMALS_CORR =
+            Arrays.asList("ɑ", "tʃ", "eɪ", "dʒ", "oʊ", "kw", "ɹ", "ʃ", "j",
+                          "ɑ", "tʃ", "eɪ", "dʒ", "oʊ", "kw", "ɹ", "ʃ", "j");
+
+    public static final List<Character> ALL_IPA_SPECIAL_CHARACTERS =
+            Arrays.asList('ɑ', 'ʌ', 'æ', 'ɛ', 'ə', 'ɜ', 'ɪ', 'ŋ', 'ɔ', 'ɒ', 'ɹ', 'θ', 'ʊ', 'ʃ', 'ʒ', 'ð');
 
     public static final Map<Character, String> NO_SPECIAL_NORMALS =
             new HashMap<>();
@@ -40,6 +55,12 @@ public class References {
             makeMap(REGULAR_LETTERS_DOTTABLE, FLPL_DIAERESIS_CORRESPONDENCES);
     public static final Map<Character, String> RAW_TO_FLPL_SPECIAL_NORMALS =
             makeMap(REGULAR_LETTERS_DOTTABLE, NORMAL_VOWELS_DOUBLED);
+    public static final Map<Character, String> RAW_TO_IPA_CIRCUMFLEX_MAP =
+            makeMap(REGULAR_LETTERS_HATTABLE, IPA_CIRCUMFLEX_CORRESPONDENCES);
+    public static final Map<Character, String> RAW_TO_IPA_DIAERESIS_MAP =
+            makeMap(REGULAR_LETTERS_DOTTABLE, IPA_DIAERESIS_CORRESPONDENCES);
+    public static final Map<Character, String> RAW_TO_IPA_SPECIAL_NORMALS =
+            makeMap(RAW_TO_IPA_SPECIAL_NORMALS_RAW, RAW_TO_IPA_SPECIAL_NORMALS_CORR);
 
     private static Map<Character, String> makeMap(List<Character> l1, List<String> l2) {
         Map<Character, String> map = new HashMap<>();

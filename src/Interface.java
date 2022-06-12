@@ -10,16 +10,19 @@ public class Interface {
 
             System.out.print(
 
-                    "\n(1) format raw text into LPL text" +     // work     // implemented
-                    "\n(2) format raw text into FLPL text" +    // work     // implemented
-                    "\n(3) format FLPL text into raw text" +    // work
+                    "\n(1) format raw text into LPL text" +     // effort       // implemented      // usable
+                    "\n(2) format raw text into FLPL text" +    // effort       // implemented      // usable
+                    "\n(3) format FLPL text into raw text" +    // effort
+
                     "\n(4) format FLPL text into LPL text" +
-                    "\n(5) format raw text into IPA text" +     // work
+                    "\n(5) format raw text into IPA text" +     // effort       // implemented      // usable
                     "\n(6) format FLPL text into IPA text" +
-                    "\n(7) format IPA text into raw text" +     // work
+
+                    "\n(7) format IPA text into raw text" +     // effort
                     "\n(8) format IPA text into LPL text" +
                     "\n(9) format IPA text into FLPL text" +
-                    "\n(10) format LPL text into raw text" +    // work
+
+                    "\n(10) format LPL text into raw text" +    // effort
                     "\n(11) format LPL text into FLPL text" +
                     "\n(12) format LPL text into IPA text" +
 

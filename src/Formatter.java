@@ -5,6 +5,10 @@ import java.util.Map;
 
 public class Formatter {
 
+    private boolean isLetterOrSpace(char c) {
+        return ('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z') || (c == ' ');
+    }
+
     private String formatRawToAnything(String rawLine, Map<Character, String> circumflexMap,
                                        Map<Character, String> diaeresisMap, Map<Character, String> specialNormals) {
 
@@ -94,8 +98,23 @@ public class Formatter {
     }
 
     private String formatRawToIPA(String rawLine) {
-        // TODO
-        throw new NotImplementedException();
+
+        String halfFormatted =
+                formatRawToAnything(rawLine, References.RAW_TO_IPA_CIRCUMFLEX_MAP, References.RAW_TO_IPA_DIAERESIS_MAP,
+                                    References.RAW_TO_IPA_SPECIAL_NORMALS).toLowerCase();
+        String formatted = "";
+
+        // in the IPA, punctuation is interpreted as special phonetic symbols sometimes (instead of interpreted as punctuation)
+        // for example, a colon (:) could be interpreted as a lengthening symbol, and an apostrophe (') as a stress symbol
+        // therefore, to avoid confusion, all punctuation in the original raw text are removed in the generated IPA transcription
+        for (char c : halfFormatted.toCharArray()) {
+            if (isLetterOrSpace(c) || References.ALL_IPA_SPECIAL_CHARACTERS.contains(c)) {
+                formatted += c;
+            }
+        }
+
+        return formatted;
+
     }
 
     private String formatFLPLtoIPA(String flplLine) {
