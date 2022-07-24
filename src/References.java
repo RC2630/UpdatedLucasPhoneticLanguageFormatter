@@ -7,17 +7,17 @@ public class References {
                             IPA_TO_FLPL = 9, LPL_TO_RAW = 10, LPL_TO_FLPL = 11, LPL_TO_IPA = 12;
 
     private static final List<Character> REGULAR_LETTERS_HATTABLE =
-            Arrays.asList('a', 'e', 'i', 'o', 'u', 'n', 's', 'x', 'z',
-                          'A', 'E', 'I', 'O', 'U', 'N', 'S', 'X', 'Z');
+            Arrays.asList('a', 'e', 'i', 'o', 'u', 'n', 's', 'x', 'z', 'c', 'j', 't', 'y',
+                          'A', 'E', 'I', 'O', 'U', 'N', 'S', 'X', 'Z', 'C', 'J', 'T', 'Y');
     private static final List<String> CIRCUMFLEX_LETTERS =
-            Arrays.asList("â", "ê", "î", "ô", "û", "n̂", "ŝ", "x̂", "ẑ",
-                          "Â", "Ê", "Î", "Ô", "Û", "N̂", "Ŝ", "X̂", "Ẑ");
+            Arrays.asList("â", "ê", "î", "ô", "û", "n̂", "ŝ", "x̂", "ẑ", "ĉ", "ĵ", "t̂", "ŷ",
+                          "Â", "Ê", "Î", "Ô", "Û", "N̂", "Ŝ", "X̂", "Ẑ", "Ĉ", "Ĵ", "T̂", "Ŷ");
     private static final List<String> FLPL_CIRCUMFLEX_CORRESPONDENCES =
-            Arrays.asList("ua", "e", "ai", "o", "au", "nn", "ss", "xx", "zz",
-                          "Ua", "E", "Ai", "O", "Au", "Nn", "Ss", "Xx", "Zz");
+            Arrays.asList("ua", "e", "ai", "o", "au", "nn", "ss", "xx", "zz", "@(F:c^)", "@(F:j^)", "@(F:t^)", "@(F:y^)",
+                          "Ua", "E", "Ai", "O", "Au", "Nn", "Ss", "Xx", "Zz", "@(F:C^)", "@(F:J^)", "@(F:T^)", "@(F:Y^)");
     private static final List<String> IPA_CIRCUMFLEX_CORRESPONDENCES =
-            Arrays.asList("ʌ", "ɛ", "aɪ", "ɔ", "aʊ", "ŋ", "θ", "ʒ", "ð",
-                          "ʌ", "ɛ", "aɪ", "ɔ", "aʊ", "ŋ", "θ", "ʒ", "ð");
+            Arrays.asList("ʌ", "ɛ", "aɪ", "ɔ", "aʊ", "ŋ", "θ", "ʒ", "ð", "@(I:c^)", "@(I:j^)", "@(I:t^)", "@(I:y^)",
+                          "ʌ", "ɛ", "aɪ", "ɔ", "aʊ", "ŋ", "θ", "ʒ", "ð", "@(I:C^)", "@(I:J^)", "@(I:T^)", "@(I:Y^)");
     private static final List<Character> REGULAR_LETTERS_DOTTABLE =
             Arrays.asList('a', 'e', 'i', 'o', 'u',
                           'A', 'E', 'I', 'O', 'U');
